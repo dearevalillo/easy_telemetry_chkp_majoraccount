@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+      - '--enable-feature=remote-write-receiver'
+    restart: always
+    ports:
+      - 9090:9090
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana
+    volumes:
+     #- ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+     # - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana/grafana.db:/var/lib/grafana/grafana.db
+
+    depends_on:
+      - prometheus
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=${ANONYMOUS_ENABLED}
+      - GF_USERS_DEFAULT_THEME=${DEFAULT_THEME}
+      - GF_SERVER_GRAFANA_PORT=${GRAFANA_PORT}
+      - GF_SECURITY_ADMIN_USER=${ADMIN_USER}
+      - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD}
+        
+    restart: always
+    ports:
+      - 3000:3000
+
+  nginx:
+    container_name: nginx
+    image: nginx:1.21.1
+    ports:
+     #- "7070:80"
+      - "4437:4437"
+      - "4438:4438"
+
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf       
+      - ./nginx/certs:/etc/nginx/certs
+    depends_on:
+      - prometheus
+      - grafana        
+    restart: always
+
