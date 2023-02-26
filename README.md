@@ -14,7 +14,7 @@ Requirements
 In my case I used an ubuntu 22.04 server virtualized on esxi with 4 cores and 8gb of ram. In this I have installed docker and docker compose.
 
 
-Deployemnt
+Deployment
 ------------
 
 1º Copy the script check_and_deploy_skyline.sh to the gw/sms give it permissions and execute it (we will introduce the path of the json configuration file that we have previously copied and the ip address of the server where we have the docker stack). If everything went well or bad we will see something like this
@@ -25,6 +25,16 @@ Deployemnt
 
 PS: If you want to modify the credentials you can modify the docker-compose commenting the line that makes reference to the database, make the modifications that you consider opportune, export the database, ...etc example:
 ![troubleshoting_grafanadb](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/troubleshoting_grafanadb.png)
+
+PS2: If you want to create a self-signed certificate here is an example of how to do it.
+
+![cert_1](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/cert_1.png)
+
+![cert_2](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/cert_2.png)
+
+![cert_3](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/cert_3.png)
+
+![cert_4](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/cert_4.png)
 
 ScreenShot
 --------------
