@@ -1,0 +1,10 @@
+{
+    "enabled": true,
+    "export-targets": {"add": [
+        {
+            "enabled": true,
+            "type": "prometheus-remote-write",
+            "url": "http://<EXTERNAL_PROMETHEUS_IP_ADDRESS>:9090/api/v1/write"
+        }
+    ]}
+} 

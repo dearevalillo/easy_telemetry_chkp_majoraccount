@@ -28,9 +28,10 @@ check_jumbo_take() {
   local json_file=$2
   jumbo_take=$(cpinfo -y all 2>/dev/null|grep HF_MAIN|grep -v _SC|tail -n1|awk '{print $NF}')
   if [[ $jumbo_take -ge $min_take ]]; then
+    #cp "$json_file" /tmp/
     response=$(/opt/CPotelcol/REST.py --set_open_telemetry "$(cat /tmp/payload-no-tls.json)")
     wait_msg='{"message": "Operation has finished successfully"}'
-        sleep 15
+	sleep 15	
     while true; do
       if [[ "$response" == *"$wait_msg"* ]]; then
         echo "Skyline has been successfully deployed"
@@ -48,20 +49,20 @@ echo "Starting checks..........."
 case $os_version in
   "R80.40")
     min_take="190"
-        jumbo_take=$(cpinfo -y all 2>/dev/null|grep HF_MAIN|grep -v _SC|tail -n1|awk '{print $NF}')
-        echo "Your version is $os_version and you have the JHF $jumbo_take, please wait ..."
+	jumbo_take=$(cpinfo -y all 2>/dev/null|grep HF_MAIN|grep -v _SC|tail -n1|awk '{print $NF}')
+	echo "Your version is $os_version and you have the JHF $jumbo_take, please wait ..."
     check_jumbo_take $min_take $json_file
     ;;
   "R81")
     min_take="77"
-        jumbo_take=$(cpinfo -y all 2>/dev/null|grep HF_MAIN|grep -v _SC|tail -n1|awk '{print $NF}')
-        echo "Your version is $os_version and you have the JHF $jumbo_take, please wait ..."
+	jumbo_take=$(cpinfo -y all 2>/dev/null|grep HF_MAIN|grep -v _SC|tail -n1|awk '{print $NF}')
+	echo "Your version is $os_version and you have the JHF $jumbo_take, please wait ..."
     check_jumbo_take $min_take $json_file
     ;;
   "R81.10")
     min_take="79"
-        jumbo_take=$(cpinfo -y all 2>/dev/null|grep HF_MAIN|grep -v _SC|tail -n1|awk '{print $NF}')
-        echo "Your version is $os_version and you have the JHF $jumbo_take, please wait ..."
+	jumbo_take=$(cpinfo -y all 2>/dev/null|grep HF_MAIN|grep -v _SC|tail -n1|awk '{print $NF}')
+	echo "Your version is $os_version and you have the JHF $jumbo_take, please wait ..."
     check_jumbo_take $min_take $json_file
     ;;
   *)
