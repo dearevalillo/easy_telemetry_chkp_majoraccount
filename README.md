@@ -51,8 +51,6 @@ ScreenShot
 
 ![grafana_dashboard](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/grafana_dashboard.png)
 
-![grafana_dashboard](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/grafana_dashboard2.png)
-
 ![grafana_machines_overview](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/grafana_machines_overview.png)
 
 ![grafana_machines_overview2](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/grafana_machines_overview2.png)
