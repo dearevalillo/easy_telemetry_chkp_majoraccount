@@ -51,7 +51,11 @@ ScreenShot
 
 ![grafana_dashboard](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/grafana_dashboard.png)
 
+![grafana_dashboard](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/grafana_dashboard2.png)
+
 ![grafana_machines_overview](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/grafana_machines_overview.png)
+
+![grafana_machines_overview2](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/grafana_machines_overview2.png)
 
 ![grafana_single_machine_1](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/grafana_single_machine_1.png)
 
@@ -66,11 +70,14 @@ ScreenShot MAESTRO
 
 ![maestro_1](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/maestro_1.png)
 
+![maestro_4](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/maestro_4.png)
+
+![maestro_5](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/maestro_5.png)
+
 ![maestro_2](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/maestro_2.png)
 
 ![maestro_3](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/maestro_3.png)
 
-![maestro_4](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/maestro_4.png)
 
 License
 -------
