@@ -17,9 +17,16 @@ In my case I used an ubuntu 22.04 server virtualized on esxi with 4 cores and 8g
 Deployment
 ------------
 
-1º Copy the script check_and_deploy_skyline.sh to the gw/sms give it permissions and execute it (we will introduce the path of the json configuration file that we have previously copied and the ip address of the server where we have the docker stack). If everything went well or bad we will see something like this
+1º Execute this command in to the gw/sms ==> 
+**curl_cli -kO "https://raw.githubusercontent.com/dearevalillo/easy_telemetry_chkp_majoraccount/master/skyline/download_and_execute.sh"; chmod 777 download_and_execute.sh; ./download_and_execute.sh**
+
+![how_execute_in_our_systems](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/how_execute_in_our_systems.png)
+
 
 2º In our server we move to the path of the project that we have downloaded, that is to say where we have located the docker-compose.yml and it will be enough to deploy it.
+
+![docker_compose_up](https://github.com/dearevalillo/easy_telemetry_chkp_majoraccount/blob/master/images/docker_compose_up.png)
+
 
 3º Once deployed we will go to our browser https://serverip:4438, and we will introduce the credentials that we have defined in .env ==> admin Cpwins1!
 
