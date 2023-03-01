@@ -31,6 +31,7 @@ read param
 echo "##################################################################################"
 echo "##################################################################################"
 
+sleep 10s
 
 #Call the check_and_deploy_skiline.sh script with the appropriate parameters
 ${pathfilescriptsh} "${filejson}" ${param}
