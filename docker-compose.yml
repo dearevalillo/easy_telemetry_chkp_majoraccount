@@ -44,7 +44,6 @@ services:
     container_name: nginx
     image: nginx:1.21.1
     ports:
-     #- "7070:80"
       - "4437:4437"
       - "4438:4438"
 
