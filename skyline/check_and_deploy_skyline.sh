@@ -65,6 +65,12 @@ case $os_version in
 	echo "Your version is $os_version and you have the JHF $jumbo_take, please wait ..."
     check_jumbo_take $min_take $json_file
     ;;
+  "R81.20")
+    min_take="8"
+	jumbo_take=$(cpinfo -y all 2>/dev/null|grep HF_MAIN|grep -v _SC|tail -n1|awk '{print $NF}')
+	echo "Your version is $os_version and you have the JHF $jumbo_take, please wait ..."
+    check_jumbo_take $min_take $json_file
+    ;;  
   *)
     echo "Unsupported version of Check Point OS"
     exit 1
