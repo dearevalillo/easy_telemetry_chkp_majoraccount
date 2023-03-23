@@ -20,7 +20,7 @@ sed "s/<EXTERNAL_PROMETHEUS_IP_ADDRESS>/$ip_address/g" $json_file > /tmp/payload
 
 
 # Verify operating system version
-os_version=$(cat /etc/*release* | awk '{print $4}')
+os_version=$(cat /etc/*release* | awk '{print $4}' | uniq)
 
 # Function to check the Jumbo Hotfix version and execute the necessary actions
 check_jumbo_take() {
